@@ -38,7 +38,7 @@ namespace ModReloader.UI.Elements.PanelElements.ModElements
         private bool updateNeeded = false;
 
         #region Constructor
-        public ModsPanel() : base(header: "Manage Mods", scrollbarEnabled: true)
+        public ModsPanel() : base(header: Loc.Get("MenuManageMods"), scrollbarEnabled: true)
         {
             AddPadding(10f);
 
@@ -51,7 +51,7 @@ namespace ModReloader.UI.Elements.PanelElements.ModElements
                 Height = new StyleDimension(40, 0f),
             };
             // Add searchbox.
-            searchbox = new Searchbox("Type to search");
+            searchbox = new Searchbox(Loc.Get("ModsTypeToSearch"));
             searchbox.Width.Set(200, 0f);
             searchbox.Height.Set(35, 0f);
             searchbox.Left.Set(10, 0f); // Place at the left edge
@@ -103,7 +103,7 @@ namespace ModReloader.UI.Elements.PanelElements.ModElements
             // Create and configure the "Enable All" panel.
             ModToggleAllPanel enableAllPanel = new(
                 color: Color.Green,
-                text: "Enable All",
+                text: Loc.Get("ModsPanel.ModsEnableAll"),
                 hover: "Enable all mods",
                 onClick: EnableAllMods
             );
@@ -113,7 +113,7 @@ namespace ModReloader.UI.Elements.PanelElements.ModElements
             // Create and configure the "Disable All" panel.
             ModToggleAllPanel disableAllPanel = new(
                 color: ColorHelper.CalamityRed,
-                text: "Disable All",
+                text: Loc.Get("ModsPanel.ModsDisableAll"),
                 hover: "Disable all mods",
                 onClick: DisableAllMods
             );

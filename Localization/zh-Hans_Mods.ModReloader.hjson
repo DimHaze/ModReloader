@@ -269,4 +269,9 @@ UIElementPanel: {
 	// HideAll: Hiding all UI elements
 }
 
+ModsPanel: {
+	ModsEnableAll: 全部启用
+	ModsDisableAll: 全部禁用
+}
+
 // LeftClickHelper.ModReloaderOffTooltip: Mod Reloader is off. To toggle, open inventory, look to the left of the hotbar and toggle the eye to see or hide all Mod Reloader tools.

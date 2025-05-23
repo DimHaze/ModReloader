@@ -18,9 +18,14 @@
             {
                 return Terraria.Localization.Language.GetTextValue($"Mods.ModReloader.{key}", args);
             }
+            else if (Terraria.Localization.Language.Exists($"tModLoader.{key}"))
+            {
+                return Terraria.Localization.Language.GetTextValue($"tModLoader.{key}", args);
+            }
             else
             {
-                return key;
+                // returns vanilla localization if the key exists, or return the key
+                return Terraria.Localization.Language.GetTextValue(key, args);
             }
         }
     }
